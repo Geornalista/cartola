@@ -149,13 +149,13 @@ export class App {
   }
 
   setupFilters() {
+    this.filterManager.setDataService(this.dataService);
+    this.filterManager.setUIManager(this.uiManager);
     this.filterManager.populateFilters(
       this.dataService.clubesParticipantes,
       this.dataService.todosClubes,
       this.dataService.todasPosicoes
     );
-    this.filterManager.setDataService(this.dataService);
-    this.filterManager.setUIManager(this.uiManager);
     this.filterManager.applyFilters();
   }
 
